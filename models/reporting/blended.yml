@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: gsheet_raw
+    schema: gsheet_raw
+    tables:
+      - name: utm_acquisitions
+        identifier: utm_acquisitions
+
+      - name: utm_acquisitions_2024
+        identifier: utm_acquisitions_2024
+
+  - name: google_sheets
+    schema: google_sheets
+    tables:
+      - name: gsheet_new_order
+        identifier: thesis_gsheet_new_order
+
+  - name: reporting
+    schema: reporting
+    tables:
+      - name: googleads_campaign_performance
+        identifier: thesis_googleads_campaign_performance
+
+      - name: utm_acquisitions
+        identifier: thesis_utm_acquisitions
