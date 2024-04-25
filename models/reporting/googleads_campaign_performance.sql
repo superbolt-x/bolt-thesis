@@ -7,7 +7,7 @@ account_id,
 campaign_name,
 campaign_id,
 campaign_status,
-CASE WHEN campaign_name ~* 'search' AND campaign_name !~* 'brand THEN 'Campaign Type: Search Unbranded'
+CASE WHEN campaign_name ~* 'search' AND campaign_name !~* 'brand' THEN 'Campaign Type: Search Unbranded'
     ELSE campaign_type_default
 END as campaign_type_default,
 CASE WHEN campaign_name ~* 'Retargeting' OR campaign_name ~* 'Brand' OR campaign_name ~* 'Blend' THEN 'Retargeting'
