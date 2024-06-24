@@ -7,7 +7,7 @@ sources:
       - name: utm_acquisitions
         identifier: utm_acquisitions
 
-      - name: utm_acquisitions_2024
+      - name: utm_acquisitions_2024_with_utm_content
         identifier: utm_acquisitions_2024_with_utm_content
 
   - name: google_sheets
