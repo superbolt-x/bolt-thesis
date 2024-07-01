@@ -3,7 +3,7 @@
 )}}
 
 with data as ( 
-select date, date_granularity, utm_campaign, SUM(utm_acquisitions) as utm_acquisitions, sum(utm_first_orders) as utm_first_orders
+select date, date_granularity, utm_campaign, SUM(utm_acquisitions) as utm_acquisitions, sum(case when customer_type = 'New' THEN utm_acquisitions END) as utm_first_orders
 FROM {{ source('reporting','utm_acquisitions') }}
 WHERE utm_source ~* 'google'
 group by 1,2,3
